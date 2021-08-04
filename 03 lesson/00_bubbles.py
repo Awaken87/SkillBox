@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import random
 
 import simple_draw as sd
 
@@ -31,14 +32,23 @@ sd.resolution = (1200, 600)
 #         sd.circle(center_position=point, radius=radius, color=[190,120,180], width=4)
 
 # Нарисовать три ряда по 10 пузырьков
-for i in range(100, 1010, 100):
-    point = sd.get_point(i, 100)
-    radius = 50
-    for _ in range(3):
-        radius += 5
-        sd.circle(center_position=point, radius=radius, color=[190,120,180], width=4)
+# y = 50
+# for _ in range(3):
+#     y += 100
+#     for i in range(100, 1010, 100):
+#         point = sd.get_point(i, y)
+#         radius = 50
+#         for _ in range(3):
+#             radius += 5
+#             sd.circle(center_position=point, radius=radius, color=[190,120,180], width=4)
 
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
-# TODO здесь ваш код
+for i in range(100):
+    point = sd.random_point()
+    step = random.randint(2, 8)
+    radius = 50
+    for _ in range(3):
+        radius += random.randint(1, 8)
+        sd.circle(center_position=point, radius=radius, color=[190,120,180], width=2)
 
 sd.pause()
