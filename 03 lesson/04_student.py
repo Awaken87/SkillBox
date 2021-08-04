@@ -10,5 +10,12 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
+expenses_inflation = 0
+i = 1
+while i < 10:
+    expenses = expenses * 1.03
+    i += 1
+    print('Студенту надо попросить в ', i, ' месяце', round(expenses, 2), ' руб.')
 
-# TODO здесь ваш код
+
+
