@@ -15,4 +15,12 @@
 # Создать рецепт своего бургера, по вашему вкусу.
 # Если не хватает инградиентов - создать соответствующие функции в модуле my_burger
 
-# TODO здесь ваш код
+import my_burger
+
+print('Чтобы сделать чисзбургер, надо:')
+print(my_burger.bread(2))
+print(my_burger.meat(1))
+print(my_burger.cucumber(2))
+print(my_burger.tomato())
+print(my_burger.sous())
+print(my_burger.cheese(2))
